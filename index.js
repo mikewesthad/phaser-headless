@@ -1,6 +1,8 @@
 const installJsDom = require("jsdom-global");
 
+// Phaser depends on globals being present, jsdom-global patches most of those in.
 const uninstallJsDom = installJsDom("", {
+  // Add RAF functionality:
   pretendToBeVisual: true,
   // Required for Phaser's TextureManager to boot (because it loads two base64 images):
   resources: "usable",
@@ -14,6 +16,7 @@ function shutdown() {
   uninstallJsDom();
 }
 
+// Make sure to import Phaser after setting up globals, since Phaser includes its own polyfills.
 const Phaser = require("phaser");
 
 class MainScene extends Phaser.Scene {
