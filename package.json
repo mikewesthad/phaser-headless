@@ -1,0 +1,17 @@
+{
+  "name": "phaser-headless",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "canvas": "^2.6.1",
+    "jsdom": "^16.2.2",
+    "jsdom-global": "^3.0.2",
+    "phaser": "^3.23.0"
+  }
+}
